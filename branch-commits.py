@@ -12,9 +12,7 @@ for branch in json_response:
 
 #LISTING ALL COMMITS FOR A GIVEN BRANCH
 branch = input('Enter the branch name - ')
-response2 = requests.get('https://api.github.com/repos/' + username + '/' + repo + '/commits')
-json_response_2 = response.json()
-for commit in json_response_2:
+for commit in json_response:
     if commit['name']==branch:
         url = commit['commit']['url']
         while True:
